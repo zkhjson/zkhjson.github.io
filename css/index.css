@@ -445,7 +445,7 @@ footer .card_group
 	position: absolute;
 	bottom: -170px;
 	left: 0;
-	transition:.3s all ease-in;	
+	transition:.3s all cubic-bezier(0.86, 0.01, 0, 1.01);	
 	background:#fff;
 	border-top:3px #0ff solid;
 	padding:20px 0;
@@ -484,11 +484,11 @@ footer .card_group
 #card2box
 {
     width: 300px;
-    height: 302px;
+    height: 300px;
     position: relative;
     float: left;
     background-size: cover;
-    background: #ccc;
+    background: #fff;
 }
 
 
