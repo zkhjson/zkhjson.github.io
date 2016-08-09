@@ -33,26 +33,26 @@
 .wall
 {
 	height: 700px;
-	background: url(../images/5.jpg) no-repeat 0 0;
-	background-size: cover;
-	opacity: 0.8;
-	filter: alpha(opacity:80);
-	-webkit-filter:blur(0px);
-	min-width: 1348px;
-	position:fixed;
-	top: 0;
-	left: 50%;
-	margin-left: -674px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -674px;
+    opacity: .8;
+    filter: alpha(opacity:80);
+    background:url(../images/banner.jpg) no-repeat 0 0;
+    background-size: cover;
+    min-width: 1348px;
 }
 nav
-{
+{	
 	position: fixed;
 	top: -52px;
 	left: 0;
 	right: 0;
 	z-index: 99;
 	height:50px;
-	border-bottom:1px #fff solid;
+	background: #fff;
+	border-bottom: 1px #000 solid;
 }
 
 nav ul li
@@ -70,14 +70,14 @@ nav ul li a
 	line-height: 50px;
 	height: 100%;
 	text-align:center;
-	color: #fff;
+	color: #000;
 	letter-spacing: 4px;
 }
 nav ul li a b
 {
 	width: 0px;
 	height: 3px;
-	background: #fff;
+	background: #000;
 	margin: -1px auto;
 	display:block;
 	transition: .15s width Linear;
@@ -119,7 +119,7 @@ nav ul .logo
 {
   position: absolute;
   font-size: 68px;
-  color: #000;
+  color: #F70758;
   width: 1px;
   left: 50%;
   opacity: 0;
@@ -167,7 +167,6 @@ nav ul .logo
 	letter-spacing:15px;
 	text-align: center;
 	cursor:pointer;
-	
 }
 #banner .inner .button
 {
@@ -263,11 +262,10 @@ h3
 	text-align:center;
 	color: #000;
 	margin:0 auto;
-	background:rgba(255,255,255,.2);
+	background:#fff;
 }
 .top_sec .top_sec_txt
 {
-	min-width: 960px;
 	margin:0 auto;
 }
 .top_sec_txt .hr
@@ -286,7 +284,7 @@ h3
 	height:80px;
 	margin:0;
 	transform: rotate(45deg);
-	border:1px solid #fff;
+	border:1px solid #000;
 	transition: 2s all linear;
 	animation: change 2s linear infinite;
 	animation-fill-mode: forwards;
@@ -447,7 +445,7 @@ footer .card_group
 	position: absolute;
 	bottom: -170px;
 	left: 0;
-	transition:.8s all cubic-bezier(1,-0.77, 0.61, 2.82);	
+	transition:.3s all ease-in;	
 	background:#fff;
 	border-top:3px #0ff solid;
 	padding:20px 0;
@@ -485,12 +483,12 @@ footer .card_group
 } */
 #card2box
 {
-    width: 550px;
+    width: 300px;
     height: 302px;
     position: relative;
     float: left;
     background-size: cover;
-    background: 
+    background: #ccc;
 }
 
 

@@ -13,11 +13,13 @@ window.onload=function(){
 	
 	/*music==============================================*/
 	var bOk=false
-	oMusicbtn.ondblclick=function(){
+	oMusicbtn.onclick=function(){
 		if (bOk==true) {
 			oAudio.pause();
+			oMusicbtn.style.color='#000';
 		}else{
 			oAudio.play();
+			oMusicbtn.style.color='#F70758';
 		}
 		if (oWrapp.style.display =='block') {
 			oWrapp.style.display ='none'
