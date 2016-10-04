@@ -114,51 +114,22 @@ window.onload=function(){
 			}
 		},30);
 	};
-	/*翻转===========================================*/
-	/*var oBox=document.querySelector('#card2box');
-        var R=5;
-        var C=6;
-        for(var r=0; r<R; r++){
-            for(var c=0; c<C; c++){
-                var oSpan=document.createElement('span');
-                oSpan.style.width=oBox.offsetWidth/C+'px';
-                oSpan.style.height=oBox.offsetHeight/R+'px';
-                oBox.appendChild(oSpan);
-                oSpan.style.left=oSpan.offsetWidth*c+'px';
-                oSpan.style.top=oSpan.offsetHeight*r+'px';
-
-                oSpan.innerHTML='<em class="front"></em><em class="back"></em>';
-                oSpan.children[0].style.backgroundPosition=-oSpan.offsetWidth*c+'px -'+oSpan.offsetHeight*r+'px';
-                oSpan.children[1].style.backgroundPosition=-oSpan.offsetWidth*c+'px -'+oSpan.offsetHeight*r+'px';
-
-                oSpan.r=r;
-                oSpan.c=c;
-            }
-        }
-
-		var aSpan=oBox.children;
-		var iNow=0;
-		var bReady=false;
-		oBox.onclick=function(){
-		    if(bReady)return;
-		    bReady=true;
-		    iNow++;
-		    for(var i=0; i<aSpan.length; i++){
-		        aSpan[i].style.transition='1s all ease '+(aSpan[i].r+aSpan[i].c)*200+'ms';
-		        aSpan[i].style.transform='perspective(800px) rotateY(-180deg)';
-		    }
-
-		    aSpan[aSpan.length-1].addEventListener('transitionend', function(){
-		        for(var i=0; i<aSpan.length; i++){
-		            aSpan[i].style.transition='none';
-		            aSpan[i].style.transform='perspective(800px) rotateY(0deg)';
-		            aSpan[i].children[0].style.backgroundImage='url(img/'+iNow%3+'.jpg)';
-		            aSpan[i].children[1].style.backgroundImage='url(img/'+(iNow+1)%3+'.jpg)';
-		        }
-		        bReady=false;
-		}, false);
-    };*/
+/*thro============================*/
+	function getDir(obj,ev){
+		var x=obj.offsetLeft+obj.offsetWidth/2-ev.clientX;
+		var y=obj.offsetTop+obj.offsetHeight/2-ev.clientY;
 	
+		return Math.round((Math.atan2(y,x)*180/Math.PI+180));
+	}
+
+	var oThrotxt=document.querySelector('#throTxt');
+	var oThroBox=document.getElementById('icon')
+	
+	oThroBox.onmouseover=function (ev){
+		var oEvent=ev||event;
+		var dir=getDir(oThroBox,oEvent);
+		oThrotxt.innerHTML=dir;
+	};
 };
 
 
